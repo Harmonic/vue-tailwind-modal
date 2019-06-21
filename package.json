@@ -1,0 +1,40 @@
+{
+  "name": "vue-tailwind-modal",
+  "version": "0.0.4",
+  "description": "A modal window for Vue using Tailwind CSS.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vue serve VueTailwindModal.vue",
+    "build": "bili --name index --plugin vue --vue.css true"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmonic/vue-tailwind-modal.git"
+  },
+  "keywords": [
+    "Modal",
+    "Vue",
+    "Tailwind",
+    "CSS"
+  ],
+  "author": "Craig Harman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harmonic/vue-tailwind-modal/issues"
+  },
+  "homepage": "https://github.com/harmonic/vue-tailwind-modal#readme",
+  "private": false,
+  "devDependencies": {
+    "bili": "^4.8.0",
+    "css-loader": "^3.0.0",
+    "rollup-plugin-vue": "^4.6.2",
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.35.0"
+  }
+}
