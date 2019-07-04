@@ -50,3 +50,10 @@ Once installed simply use as any other component:
 
 To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide). 
 You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
+
+### Animate in/out
+An optional CSS file can be included (using your CSS management technique of choice) css/modal.css that will add a fade in and out animation to the modal.
+
+``` js
+@import "modal"; // postCSS
+```
