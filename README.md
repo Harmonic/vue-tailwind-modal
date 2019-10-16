@@ -1,6 +1,6 @@
 # Vue Tailwind Modal
 
-A Vue component that creates a Modal using [Tailwind CSS]([https://](https://tailwindcss.com).
+A Vue component that creates a Modal using [Tailwind CSS](https://tailwindcss.com).
 
 ## Project setup
 
