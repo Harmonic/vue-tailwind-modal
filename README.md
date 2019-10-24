@@ -53,7 +53,7 @@ You can capture the close event using @close to hide the modal (as in the exampl
 
 ### The modal overlay
 If you want the modal overlay on you project, you need to extend the colors property of the `tailwind.config.css` file like so : 
-```json
+```
 // tailwind.config.js
 module.exports = {
   theme: {
