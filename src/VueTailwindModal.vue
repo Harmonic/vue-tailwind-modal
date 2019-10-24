@@ -13,7 +13,7 @@
         >
           ×
         </button>
-        <div class="overflow-auto max-h-screen w-full">
+        <div class="max-h-screen w-full">
           <slot />
         </div>
       </div>
@@ -45,7 +45,10 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
+.bg-smoke-dark {
+  background-color: rgba(0, 0, 0, 0.6)
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.6s;
