@@ -51,6 +51,27 @@ Once installed simply use as any other component:
 To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide). 
 You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
 
+### The modal overlay
+If you want the modal overlay on you project, you need to extend the colors property of the `tailwind.config.css` file like so : 
+```json
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'smoke-darkest': 'rgba(0, 0, 0, 0.9)',
+	'smoke-darker': 'rgba(0, 0, 0, 0.75)',
+	'smoke-dark': 'rgba(0, 0, 0, 0.6)',
+	'smoke': 'rgba(0, 0, 0, 0.5)',
+	'smoke-light': 'rgba(0, 0, 0, 0.4)',
+	'smoke-lighter': 'rgba(0, 0, 0, 0.25)',
+	'smoke-lightest': 'rgba(0, 0, 0, 0.1)'
+      }
+    }
+  }
+}
+```
+
 ### Animate in/out
 An optional CSS file can be included (using your CSS management technique of choice) css/modal.css that will add a fade in and out animation to the modal.
 
