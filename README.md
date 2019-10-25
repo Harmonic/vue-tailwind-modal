@@ -51,6 +51,30 @@ Once installed simply use as any other component:
 To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide). 
 You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
 
+### Background colour
+
+If you would like to grey out the background you will need to add the "smoke" background colour to your tailwind.config.js file, an example below:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'smoke-900': 'rgba(0, 0, 0, 0.9)',
+        'smoke-800': 'rgba(0, 0, 0, 0.75)',
+        'smoke-600': 'rgba(0, 0, 0, 0.6)',
+        'smoke': 'rgba(0, 0, 0, 0.5)',
+        'smoke-400': 'rgba(0, 0, 0, 0.4)',
+        'smoke-200': 'rgba(0, 0, 0, 0.25)',
+        'smoke-100': 'rgba(0, 0, 0, 0.1)',
+      },
+    }
+  },
+  variants: {},
+  plugins: []
+}
+```
+
 ### Animate in/out
 An optional CSS file can be included (using your CSS management technique of choice) css/modal.css that will add a fade in and out animation to the modal.
 

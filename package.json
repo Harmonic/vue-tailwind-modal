@@ -1,6 +1,6 @@
 {
   "name": "vue-tailwind-modal",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A modal window for Vue using Tailwind CSS.",
   "main": "./dist/vue-tailwind-modal.common.js",
   "scripts": {
