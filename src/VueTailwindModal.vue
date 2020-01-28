@@ -42,9 +42,17 @@ export default {
     close() {
       this.$emit('close');
     }
-  }
+  },
+  mounted: function() {
+    document.addEventListener("keydown", e => {
+      if (e.keyCode == 27) {
+        this.close();
+      }
+    });
+    }
 };
 </script>
+
 <style>
 .fade-enter-active,
 .fade-leave-active {
