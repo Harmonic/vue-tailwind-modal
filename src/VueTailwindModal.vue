@@ -8,7 +8,7 @@
       <div class="relative max-h-screen w-full max-w-2xl bg-white shadow-lg rounded-lg p-8 flex">
         <button
           aria-label="close"
-          class="absolute top-0 right-0 text-xl text-gray-500 my-2 mx-4"
+          class="absolute top-0 right-0 text-xl text-gray-500 my-2 mx-4 focus:outline-none"
           @click.prevent="close"
         >
           ×
