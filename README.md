@@ -22,7 +22,7 @@ In your main js file:
 
 ``` js
 import VueTailwindModal from 'vue-tailwind-modal'
-Vue.use(VueTailwindModal);
+Vue.component('VueTailwindModal', VueTailwindModal);
 ```
 
 ### Using within a component
