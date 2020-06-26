@@ -20,16 +20,16 @@ yarn add vue-tailwind-modal
 
 In your main js file:
 
-``` js
-import VueTailwindModal from 'vue-tailwind-modal'
-Vue.component('VueTailwindModal', VueTailwindModal);
+```js
+import VueTailwindModal from "vue-tailwind-modal"
+Vue.component("VueTailwindModal", VueTailwindModal)
 ```
 
 ### Using within a component
 
 In your component .vue file
 
-``` js
+```js
 import VueTailwindModal from 'vue-tailwind-modal'
 
 export default {
@@ -42,14 +42,19 @@ export default {
 
 Once installed simply use as any other component:
 
-``` html
-<vue-tailwind-modal :showing="true" @close="showModal = false">
-<!-- Put your modal content here -->
+```html
+<vue-tailwind-modal
+	:showing="true"
+	@close="showModal = false"
+	:showClose="true"
+>
+	<!-- Put your modal content here -->
 </vue-tailwind-modal>
 ```
 
-To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide). 
+To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide).
 You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
+If you do not wish to show the close button (top right) change :showClose to false.
 
 ### Background colour
 
@@ -57,27 +62,28 @@ If you would like to grey out the background you will need to add the "smoke" ba
 
 ```js
 module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        'smoke-900': 'rgba(0, 0, 0, 0.9)',
-        'smoke-800': 'rgba(0, 0, 0, 0.75)',
-        'smoke-600': 'rgba(0, 0, 0, 0.6)',
-        'smoke': 'rgba(0, 0, 0, 0.5)',
-        'smoke-400': 'rgba(0, 0, 0, 0.4)',
-        'smoke-200': 'rgba(0, 0, 0, 0.25)',
-        'smoke-100': 'rgba(0, 0, 0, 0.1)',
-      },
-    }
-  },
-  variants: {},
-  plugins: []
+	theme: {
+		extend: {
+			colors: {
+				"smoke-900": "rgba(0, 0, 0, 0.9)",
+				"smoke-800": "rgba(0, 0, 0, 0.75)",
+				"smoke-600": "rgba(0, 0, 0, 0.6)",
+				smoke: "rgba(0, 0, 0, 0.5)",
+				"smoke-400": "rgba(0, 0, 0, 0.4)",
+				"smoke-200": "rgba(0, 0, 0, 0.25)",
+				"smoke-100": "rgba(0, 0, 0, 0.1)",
+			},
+		},
+	},
+	variants: {},
+	plugins: [],
 }
 ```
 
 ### Animate in/out
+
 An optional CSS file can be included (using your CSS management technique of choice) css/modal.css that will add a fade in and out animation to the modal.
 
-``` js
+```js
 @import "modal"; // postCSS
 ```
