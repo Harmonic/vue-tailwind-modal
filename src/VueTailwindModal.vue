@@ -46,6 +46,7 @@
 		},
 		methods: {
 			close() {
+				document.querySelector("body").classList.remove("overflow-hidden");
 				this.$emit("close");
 			},
 			closeIfShown() {
