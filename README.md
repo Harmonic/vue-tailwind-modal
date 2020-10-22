@@ -47,6 +47,7 @@ Once installed simply use as any other component:
 	:showing="true"
 	@close="showModal = false"
 	:showClose="true"
+	:backgroundClose="true"
 >
 	<!-- Put your modal content here -->
 </vue-tailwind-modal>
@@ -55,6 +56,8 @@ Once installed simply use as any other component:
 To hide and show the modal simply pass a boolean to the :showing attribute (true to show, false to hide).
 You can capture the close event using @close to hide the modal (as in the example above) and do further processing.
 If you do not wish to show the close button (top right) change :showClose to false.
+
+By default clicking on the background will close the modal. To prevent this change backgroundClose parameter to `false`.
 
 ### Background colour
 

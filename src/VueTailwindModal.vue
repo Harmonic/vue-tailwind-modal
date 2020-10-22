@@ -34,6 +34,10 @@
 			showClose: {
 				type: Boolean,
 				default: true
+			},
+			backgroundClose: {
+				type: Boolean,
+				default: true,
 			}
 		},
 		watch: {
@@ -50,7 +54,7 @@
 				this.$emit("close");
 			},
 			closeIfShown() {
-				if (this.showClose) {
+				if (this.showClose && this.backgroundClose) {
 					this.close();
 				}
 			}
