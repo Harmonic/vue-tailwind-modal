@@ -90,3 +90,28 @@ An optional CSS file can be included (using your CSS management technique of cho
 ```js
 @import "modal"; // postCSS
 ```
+
+### Purge CSS in production
+
+When using purge CSS in production you will need to add the smoke background colour you use to the Purge CSS whitelist and inlcude the modules classes for purging. Below is an example tailwind.config.js extract:
+
+```js
+module.exports = {
+   purge: {
+	content: [
+		'./apps-ui/portal/layouts/**/*.vue',
+		'./apps-ui/portal/pages/**/*.vue',
+		'./apps-ui/portal/components/**/*.vue',
+		'./apps-ui/portal/plugins/**/*.vue',
+		'./apps-ui/portal/static/**/*.vue',
+		'./apps-ui/portal/store/**/*.vue',
+		'./node_modules/vue-tailwind-modal/src/VueTailwindModal.vue',
+	],
+	options: {
+		// Include the bg-smoke for use when css is compressed
+		// see: https://tailwindcss.com/docs/controlling-file-size
+		whitelist: ['bg-smoke-800'],
+	},
+   },
+}
+```
