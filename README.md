@@ -63,6 +63,32 @@ If you do not wish to show the close button (top right) change :showClose to fal
 
 By default clicking on the background will close the modal. To prevent this change backgroundClose parameter to `false`.
 
+### Custom CSS
+
+You can pass an optional `CSS` parameter to the component to customise the modal. Simply pass an object with one or more of the following keys:
+
+```js
+modalOptions: {
+	background: "",
+	modal: "max-h-90",
+	close: "",
+}
+```
+
+The right hand side should contain the Tailwind CSS or standard CSS classes you want to add to the modal.
+
+Then add this to the Modal:
+
+```html
+<vue-tailwind-modal
+	:showing="true"
+	@close="showModal = false"
+	:showClose="true"
+	:backgroundClose="true"
+	:css="modalOptions"
+/>
+```
+
 ### Background colour
 
 If you would like to grey out the background you will need to add the "smoke" background colour to your tailwind.config.js file, an example below:

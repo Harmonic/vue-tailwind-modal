@@ -4,14 +4,17 @@
 			v-if="showing"
 			class="fixed inset-0 w-full h-screen flex items-center justify-center bg-smoke-800 z-50"
 			@click.self="closeIfShown"
+			:class="customCSS.background"
 		>
 			<div
 				class="relative max-h-screen w-full max-w-2xl bg-white shadow-lg rounded-lg p-8 flex"
+				:class="customCSS.modal"
 			>
 				<button
 					v-if="showClose"
 					aria-label="close"
 					class="absolute top-0 right-0 text-xl text-gray-500 my-2 mx-4"
+					:class="customCSS.close"
 					@click.prevent="close"
 				>
 					×
@@ -38,6 +41,19 @@
 			backgroundClose: {
 				type: Boolean,
 				default: true,
+			},
+			css: {
+				type: Object,
+				required: false
+			}
+		},
+		computed: {
+			customCSS() {
+				return {...{
+					background: '',
+					modal: '',
+					close: ''
+				}, ...this.css}
 			}
 		},
 		watch: {
@@ -62,7 +78,7 @@
 		mounted: function() {
 			if (this.showClose) {
 				document.addEventListener("keydown", e => {
-					if (e.keyCode == 27) {
+					if (e.key === "Escape") {
 						this.close();
 					}
 				});

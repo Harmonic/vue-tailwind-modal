@@ -1,5 +1,4 @@
 import VueTailwindModal from "./VueTailwindModal.vue"
-//require('./css/modal.css');
 
 export default {
 	install(Vue) {
