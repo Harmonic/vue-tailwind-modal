@@ -2,6 +2,10 @@
 
 A Vue component that creates a Modal\Lightbox using [Tailwind CSS](https://tailwindcss.com).
 
+Supports Vue 2 and 3, TailwindCSS 1 and 2.
+
+> Note: Assumes you already have Tailwind CSS installed in your project (it is not a dependency of this package)
+
 ## Project setup
 
 ```
