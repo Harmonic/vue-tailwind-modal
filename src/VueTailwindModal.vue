@@ -38,6 +38,10 @@
 				type: Boolean,
 				default: true
 			},
+			actionClose: {
+				type: Boolean,
+				default: true
+			},
 			backgroundClose: {
 				type: Boolean,
 				default: true,
@@ -70,13 +74,13 @@
 				this.$emit("close");
 			},
 			closeIfShown() {
-				if (this.showClose && this.backgroundClose) {
+				if (this.actionClose && this.backgroundClose) {
 					this.close();
 				}
 			}
 		},
 		mounted: function() {
-			if (this.showClose) {
+			if (this.actionClose) {
 				document.addEventListener("keydown", e => {
 					if (e.key === "Escape") {
 						this.close();
